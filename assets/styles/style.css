@@ -1,0 +1,136 @@
+/* RESET USER AGENT VALUES */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:ital,wght@0,300;0,400;0,700;1,500&family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500&display=swap");
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  /* Fonts */
+
+  --ff-body: "Roboto", sans-serif;
+  --ff-bold: "Poppins", sans-serif;
+
+  --fs-body: 1rem;
+  --fs-bold: 1.5rem;
+
+  /* Colors */
+
+  --bg-clr: #ece8ef;
+  --f-clr: #040f0f;
+  --second-clr: #dc493a;
+}
+
+/* GRID LAYOUT */
+
+body {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar main main main"
+    "footer footer footer footer";
+  grid-template-columns: 15%;
+  background-color: var(--bg-clr);
+  font-family: var(--ff-body);
+}
+
+.item {
+  border: 1px solid black;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+/* NAV */
+
+nav {
+  grid-area: nav;
+  background-color: var(--second-clr);
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-family: var(--ff-bold);
+}
+
+/* SIDEBAR */
+
+aside {
+  grid-area: sidebar;
+}
+
+.flex-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+h2 {
+  margin: 1em 0 0 0;
+  font-family: var(--ff-bold);
+}
+
+.product-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20%;
+}
+
+.product-list li {
+  font-size: 1.2rem;
+}
+/* MAIN CONTENT */
+
+main {
+  grid-area: main;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2em 0;
+  border: 1px solid black;
+  width: 300px;
+  gap: 0.5em;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--second-clr);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+/* FOOTER */
+
+footer {
+  grid-area: footer;
+  padding: 1em 0;
+}
+
+footer p {
+  text-align: center;
+}
