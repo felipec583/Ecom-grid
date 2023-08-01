@@ -21,7 +21,7 @@
 
   /* Colors */
 
-  --bg-clr: #ece8ef;
+  --primary-clr: #f9f8fa;
   --f-clr: #040f0f;
   --second-clr: #dc493a;
 }
@@ -56,7 +56,7 @@ nav {
 }
 
 h1 {
-  color: white;
+  color: var(--primary-clr);
   font-size: 3rem;
   text-align: center;
   font-family: var(--ff-bold);
@@ -92,6 +92,15 @@ h2 {
   font-size: 1.2rem;
 }
 
+.product-list a {
+  text-decoration: none;
+  color: var(--f-clr);
+}
+
+.product-list a:hover {
+  color: var(--second-clr);
+}
+
 .product-n {
   color: var(--second-clr);
 }
@@ -104,9 +113,7 @@ main {
 .main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items:center;
-  /* width: 1100px;
-  margin: 0 auto; */
+  justify-items: center;
 }
 
 .card {
@@ -157,4 +164,6 @@ footer {
 
 footer p {
   text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
